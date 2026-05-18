@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ClipForge Publisher</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("code") || params.has("error")) {
+        const target = "http://127.0.0.1:8765/api/tiktok/callback?" + params.toString();
+        window.location.replace(target);
+      }
+    </script>
     <style>
       :root {
         color-scheme: dark;
@@ -55,6 +62,10 @@
       <p>
         The app helps the user export clips with audio, burned-in subtitles, covers, captions and hashtags.
         TikTok upload features are used only by the authorized account owner for videos selected inside the app.
+      </p>
+      <p>
+        If you arrived here after authorizing TikTok, keep ClipForge open locally and wait a moment.
+        The authorization code will be forwarded to the local app automatically.
       </p>
       <div class="links">
         <a href="terms.html">Terms of Service</a>
