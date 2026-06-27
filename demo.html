@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demonstração do ClipForge Publisher</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ClipForge Publisher">
+        <img src="clipforge-icon-1024.png" alt="" />
+        <span>ClipForge Publisher</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="index.html#fluxo">Fluxo TikTok</a>
+        <a href="demo.html">Demonstração</a>
+        <a href="privacy.html">Privacidade</a>
+        <a href="terms.html">Termos</a>
+      </nav>
+    </header>
+
+    <main class="legal">
+      <h1>Demonstração do ClipForge Publisher</h1>
+      <p class="updated">
+        Esta página descreve o mesmo fluxo que deve aparecer no vídeo enviado ao
+        TikTok Developer Portal.
+      </p>
+
+      <section class="demo-flow">
+        <article>
+          <strong>01</strong>
+          <h2>Abrir o site público</h2>
+          <p>
+            Mostrar <code>https://masukazip.github.io/clipforge/</code> com o ícone
+            do ClipForge Publisher no favicon, cabeçalho e rodapé.
+          </p>
+        </article>
+        <article>
+          <strong>02</strong>
+          <h2>Abrir o app local</h2>
+          <p>
+            Clicar em <em>Entrar com TikTok no app local</em> ou abrir
+            <code>http://127.0.0.1:8765/</code>, entrar na aba Publicação e mostrar
+            os campos de credenciais.
+          </p>
+        </article>
+        <article>
+          <strong>03</strong>
+          <h2>Autorizar TikTok</h2>
+          <p>
+            Clicar em <em>Conectar TikTok</em>, mostrar a tela oficial de autorização
+            do TikTok e voltar automaticamente para o ClipForge após o callback.
+          </p>
+        </article>
+        <article>
+          <strong>04</strong>
+          <h2>Selecionar MP4</h2>
+          <p>
+            Selecionar um MP4 de teste gerado pelo ClipForge, preencher legenda e
+            confirmar as opções de privacidade.
+          </p>
+        </article>
+        <article>
+          <strong>05</strong>
+          <h2>Publicar com Direct Post</h2>
+          <p>
+            Clicar em <em>Postar direto</em>, mostrar o upload pela API e o
+            publish_id retornado.
+          </p>
+        </article>
+        <article>
+          <strong>06</strong>
+          <h2>Consultar status</h2>
+          <p>
+            Clicar em <em>Verificar status</em> e mostrar o status retornado pelo
+            TikTok, como PROCESSING ou PUBLISH_COMPLETE.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Escopos demonstrados</h2>
+        <p>
+          O vídeo deve demonstrar apenas os escopos solicitados no portal:
+          <code>user.info.basic</code> para identificar a conta autorizada e
+          <code>video.publish</code> para postar o MP4 via Direct Post.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <img src="clipforge-icon-1024.png" alt="" />
+      <span>ClipForge Publisher</span>
+      <a href="index.html">Início</a>
+      <a href="privacy.html">Política de Privacidade</a>
+      <a href="terms.html">Termos de Serviço</a>
+    </footer>
+  </body>
+</html>

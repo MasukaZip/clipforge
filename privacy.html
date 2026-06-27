@@ -1,51 +1,141 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClipForge Publisher - Privacy Policy</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 32px;
-        background: #111418;
-        color: #f4f7fb;
-        font: 16px/1.6 "Segoe UI", Arial, sans-serif;
-      }
-      main { max-width: 880px; margin: auto; }
-      p, li { color: #b8c2cf; }
-      a { color: #8cc7ff; }
-    </style>
+    <title>Política de Privacidade do ClipForge Publisher</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="site.css" />
   </head>
   <body>
-    <main>
-      <h1>Privacy Policy</h1>
-      <p>Last updated: May 17, 2026</p>
-      <p>
-        ClipForge Publisher is designed to run locally on the user's computer. Video files are processed locally
-        unless the user explicitly chooses to upload a finished clip to a connected platform.
-      </p>
-      <h2>Information Used</h2>
-      <ul>
-        <li>Local video paths and export settings selected by the user.</li>
-        <li>Captions, hashtags and cover information generated for the user's clips.</li>
-        <li>TikTok authorization tokens when the user connects a TikTok account for upload features.</li>
-      </ul>
-      <h2>How Information Is Used</h2>
-      <p>
-        Information is used to process clips, generate publishing assets and upload selected videos through official
-        platform APIs. ClipForge Publisher does not sell personal data.
-      </p>
-      <h2>Third-Party Services</h2>
-      <p>
-        TikTok upload features use TikTok's official APIs. When using those features, TikTok's own terms and privacy
-        policies also apply.
-      </p>
-      <h2>Data Storage</h2>
-      <p>
-        App settings may be stored locally on the user's computer. The user can remove local configuration files at any time.
-      </p>
-      <p><a href="index.html">Back to ClipForge Publisher</a></p>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ClipForge Publisher">
+        <img src="clipforge-icon-1024.png" alt="" />
+        <span>ClipForge Publisher</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="index.html#fluxo">Fluxo TikTok</a>
+        <a href="demo.html">Demonstração</a>
+        <a href="privacy.html">Privacidade</a>
+        <a href="terms.html">Termos</a>
+      </nav>
+    </header>
+
+    <main class="legal">
+      <h1>Política de Privacidade do ClipForge Publisher</h1>
+      <p class="updated">Última atualização: 27 de junho de 2026</p>
+
+      <section>
+        <h2>1. Visão geral</h2>
+        <p>
+          O ClipForge Publisher é uma ferramenta local para criação e publicação de
+          vídeos curtos. O processamento principal dos arquivos ocorre no computador
+          do usuário. A integração com TikTok é usada somente quando o usuário decide
+          conectar sua conta e publicar um MP4 selecionado por ele.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Dados tratados pelo aplicativo</h2>
+        <p>O aplicativo pode tratar as seguintes informações:</p>
+        <ul>
+          <li>arquivos de vídeo selecionados pelo usuário e seus caminhos locais;</li>
+          <li>configurações de exportação, legenda, capa, hashtags e privacidade;</li>
+          <li>identificador da conta TikTok, nome de exibição e avatar quando autorizados;</li>
+          <li>tokens OAuth do TikTok necessários para enviar vídeos e consultar status;</li>
+          <li>publish_id e respostas técnicas retornadas pela Content Posting API.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Finalidades</h2>
+        <p>Usamos esses dados para:</p>
+        <ul>
+          <li>preparar vídeos curtos, capas, descrições e arquivos auxiliares;</li>
+          <li>permitir login seguro com TikTok usando OAuth e PKCE;</li>
+          <li>enviar o vídeo escolhido pelo usuário pela Content Posting API;</li>
+          <li>consultar e exibir o status de publicação retornado pelo TikTok;</li>
+          <li>manter preferências locais para facilitar usos futuros.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Armazenamento e retenção</h2>
+        <p>
+          As configurações, tokens e caminhos de arquivos ficam armazenados localmente
+          no computador do usuário, salvo quando uma chamada oficial ao TikTok é
+          necessária para login, publicação ou consulta de status. O usuário pode
+          remover esses dados apagando a configuração local do aplicativo ou
+          desconectando a integração.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Compartilhamento</h2>
+        <p>
+          Não vendemos dados pessoais. Informações são enviadas ao TikTok somente
+          quando o usuário autoriza a conta e solicita uma publicação ou consulta de
+          status. O uso do TikTok também é regido pelos termos e políticas do TikTok.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Segurança</h2>
+        <p>
+          O ClipForge usa OAuth para autorização, troca de código no backend local e
+          chamadas HTTPS para APIs oficiais. O usuário deve manter seu computador,
+          navegador e credenciais protegidos e não compartilhar client secrets,
+          tokens ou arquivos privados.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Controle do usuário</h2>
+        <p>O usuário pode:</p>
+        <ul>
+          <li>não conectar o TikTok e usar apenas o processamento local;</li>
+          <li>selecionar manualmente quais vídeos serão enviados;</li>
+          <li>editar legendas, hashtags e privacidade antes do envio;</li>
+          <li>revogar o acesso do app nas configurações da conta TikTok;</li>
+          <li>apagar arquivos exportados e configurações locais quando desejar.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>8. Menores de idade</h2>
+        <p>
+          O aplicativo não é destinado a menores que não possam aceitar estes termos
+          ou autorizar integrações de plataforma por conta própria. Usuários devem
+          respeitar as regras de idade e elegibilidade do TikTok.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Contato</h2>
+        <p>
+          Para solicitações sobre privacidade, exclusão de dados locais ou dúvidas
+          sobre a integração, use o canal de suporte informado no TikTok Developer
+          Portal do ClipForge Publisher ou o contato público associado ao repositório
+          do projeto.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Alterações</h2>
+        <p>
+          Esta política pode ser atualizada para refletir mudanças no produto,
+          requisitos legais ou regras das plataformas integradas. A data de
+          atualização será alterada quando houver mudanças relevantes.
+        </p>
+      </section>
     </main>
+
+    <footer>
+      <img src="clipforge-icon-1024.png" alt="" />
+      <span>ClipForge Publisher</span>
+      <a href="index.html">Início</a>
+      <a href="terms.html">Termos de Serviço</a>
+    </footer>
   </body>
 </html>

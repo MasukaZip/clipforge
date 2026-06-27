@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ClipForge Publisher</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="site.css" />
     <script>
       const params = new URLSearchParams(window.location.search);
       if (params.has("code") || params.has("error")) {
@@ -11,66 +14,156 @@
         window.location.replace(target);
       }
     </script>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #111418;
-        --panel: #1d222a;
-        --text: #f4f7fb;
-        --muted: #aeb8c5;
-        --blue: #2d8cff;
-        --border: #343b46;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 32px;
-        background: var(--bg);
-        color: var(--text);
-        font: 16px/1.6 "Segoe UI", Arial, sans-serif;
-      }
-      main {
-        width: min(920px, 100%);
-        background: var(--panel);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 40px;
-      }
-      h1 { margin: 0 0 12px; font-size: 38px; line-height: 1.1; }
-      p { color: var(--muted); }
-      a { color: #8cc7ff; }
-      .links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
-      .links a {
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 10px 14px;
-        text-decoration: none;
-        background: #252b34;
-      }
-    </style>
   </head>
   <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ClipForge Publisher">
+        <img src="clipforge-icon-1024.png" alt="" />
+        <span>ClipForge Publisher</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#fluxo">Fluxo TikTok</a>
+        <a href="demo.html">Demonstração</a>
+        <a href="privacy.html">Privacidade</a>
+        <a href="terms.html">Termos</a>
+      </nav>
+    </header>
+
     <main>
-      <h1>ClipForge Publisher</h1>
-      <p>
-        ClipForge Publisher is a desktop tool for creators who prepare short vertical MP4 videos for TikTok,
-        YouTube Shorts and similar platforms.
-      </p>
-      <p>
-        The app helps the user export clips with audio, burned-in subtitles, covers, captions and hashtags.
-        TikTok upload features are used only by the authorized account owner for videos selected inside the app.
-      </p>
-      <p>
-        If you arrived here after authorizing TikTok, keep ClipForge open locally and wait a moment.
-        The authorization code will be forwarded to the local app automatically.
-      </p>
-      <div class="links">
-        <a href="terms.html">Terms of Service</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Ferramenta local para criadores</p>
+          <h1>ClipForge Publisher</h1>
+          <p>
+            O ClipForge Publisher ajuda criadores autorizados a preparar vídeos curtos,
+            legendas, capas e descrições e a publicar o MP4 final no TikTok por meio da
+            Content Posting API oficial.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="http://127.0.0.1:8765/" rel="noopener">
+              Entrar com TikTok no app local
+            </a>
+            <a class="button secondary" href="demo.html">Ver fluxo de demonstração</a>
+          </div>
+          <p class="notice">
+            O login OAuth é iniciado pelo aplicativo local em
+            <strong>http://127.0.0.1:8765/</strong>. Este site público hospeda a URL de
+            callback, a política, os termos e a documentação do fluxo para revisão.
+          </p>
+        </div>
+        <div class="product-visual" aria-label="Prévia do fluxo de publicação">
+          <div class="window-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="app-frame">
+            <aside>
+              <strong>ClipForge</strong>
+              <span>Fila</span>
+              <span>Exportação</span>
+              <span class="active">Publicação</span>
+            </aside>
+            <section>
+              <div class="status-pill">TikTok conectado</div>
+              <div class="video-card"></div>
+              <div class="form-line wide"></div>
+              <div class="form-line"></div>
+              <div class="button-row">
+                <span>Postar direto</span>
+                <span>Verificar status</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="fluxo" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Integração aprovada para revisão</p>
+          <h2>Fluxo completo de ponta a ponta</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <strong>1</strong>
+            <h3>Entrar com TikTok</h3>
+            <p>
+              O usuário abre o ClipForge local, clica em Conectar TikTok e autoriza
+              o app pelo Login Kit usando PKCE.
+            </p>
+          </article>
+          <article>
+            <strong>2</strong>
+            <h3>Preparar o vídeo</h3>
+            <p>
+              O usuário seleciona um MP4 criado no ClipForge, revisa legenda,
+              hashtags e configura a privacidade permitida pela conta.
+            </p>
+          </article>
+          <article>
+            <strong>3</strong>
+            <h3>Publicar com API oficial</h3>
+            <p>
+              O app envia o arquivo pela Content Posting API Direct Post e salva o
+              publish_id retornado pelo TikTok.
+            </p>
+          </article>
+          <article>
+            <strong>4</strong>
+            <h3>Consultar status</h3>
+            <p>
+              O usuário acompanha PROCESSING, PUBLISH_COMPLETE ou FAILED pela API
+              de status de publicação.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="eyebrow">Escopos solicitados</p>
+          <h2>Escopos mínimos para evitar incompatibilidade</h2>
+          <p>
+            O ClipForge Publisher solicita apenas os escopos necessários para login
+            e postagem direta. Produtos e escopos não usados devem ser removidos do
+            TikTok Developer Portal antes do reenvio.
+          </p>
+        </div>
+        <div class="scope-list">
+          <div>
+            <strong>user.info.basic</strong>
+            <span>Identifica a conta autorizada depois do login.</span>
+          </div>
+          <div>
+            <strong>video.publish</strong>
+            <span>Publica o MP4 selecionado pelo usuário via Direct Post.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="eyebrow">Callback OAuth</p>
+          <h2>Como o login é concluído</h2>
+          <p>
+            A URL de redirecionamento configurada no TikTok Developer Portal deve ser
+            esta página pública. Quando o TikTok retorna com <code>code</code> e
+            <code>state</code>, a página encaminha os parâmetros para o backend local
+            do ClipForge, onde o token é trocado com segurança.
+          </p>
+        </div>
+        <div class="callback-box">
+          <span>Redirect URI</span>
+          <code>https://masukazip.github.io/clipforge/</code>
+          <span>App local</span>
+          <code>http://127.0.0.1:8765/api/tiktok/callback</code>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <img src="clipforge-icon-1024.png" alt="" />
+      <span>ClipForge Publisher</span>
+      <a href="privacy.html">Política de Privacidade</a>
+      <a href="terms.html">Termos de Serviço</a>
+    </footer>
   </body>
 </html>
